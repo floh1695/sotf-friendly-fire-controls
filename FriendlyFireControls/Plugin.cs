@@ -7,8 +7,14 @@ namespace FriendlyFireControls
     {
         private void Awake()
         {
-            // Plugin startup logic
-            Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
+            Logger.LogInfo($"Plugin {PluginString()} is loaded!");
         }
+
+        private void Update()
+        {
+            Logger.LogInfo($"Plugin {PluginString()} is running!");
+        }
+
+        private string PluginString() => $"{PluginInfo.PLUGIN_GUID}-{PluginInfo.PLUGIN_NAME}-{PluginInfo.PLUGIN_VERSION}";
     }
 }
