@@ -1,18 +1,27 @@
 ﻿using BepInEx;
+using UnityEngine;
 
 namespace FriendlyFireControls
 {
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
+    [BepInProcess("SonsOfTheForest.exe")]
     public class Plugin : BaseUnityPlugin
     {
-        private void Awake()
+        public double logHeartbeatCounter;
+
+        public void Awake()
         {
             Logger.LogInfo($"Plugin {PluginString()} is loaded!");
         }
 
-        private void Update()
+        public void Update()
         {
-            Logger.LogInfo($"Plugin {PluginString()} is running!");
+            logHeartbeatCounter += Time.deltaTime;
+            if (logHeartbeatCounter > 1.0f)
+            {
+                logHeartbeatCounter -= 1.0f;
+                Logger.LogInfo($"Plugin {PluginString()} is running!");
+            }
         }
 
         private string PluginString() => $"{PluginInfo.PLUGIN_GUID}-{PluginInfo.PLUGIN_NAME}-{PluginInfo.PLUGIN_VERSION}";
