@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>FriendlyFireControls</AssemblyName>
-    <Description>Don't bash your friends anymore!</Description>
+    <Description>This doesn't work right yet! -- Sick of hitting your friends in multiplayer? Configure the pain away!</Description>
     <Version>0.1.2</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>

@@ -13,8 +13,13 @@ $pluginName = "FriendlyFireControls"
 $version = Get-Content "$pluginName/$pluginName.csproj" `
   | Select-String -Pattern '<Version>(.*?)<\/Version>' `
   | Foreach-Object {$_.Matches.Groups[1].Value}
+$description = Get-Content "$pluginName/$pluginName.csproj" `
+  | Select-String -Pattern '<Description>(.*?)<\/Description>' `
+  | Foreach-Object {$_.Matches.Groups[1].Value}
 $replacements = @{
+    '{$$|name|$$}' = $pluginName
     '{$$|version|$$}' = $version
+    '{$$|description|$$}' = $description
 }
 Get-Content "./manifest.json" `
   | ForEach-Object {

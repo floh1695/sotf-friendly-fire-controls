@@ -1,8 +1,8 @@
 {
-  "name": "FriendlyFireControls",
+  "name": "{$$|name|$$}",
   "version_number": "{$$|version|$$}",
   "website_url": "https://github.com/floh1695/sotf-friendly-fire-controls",
-  "description": "Beta, doesn't work right yet! -- Sick of hitting your friends in multiplayer? Configure the pain away!",
+  "description": "{$$|description|$$}",
   "dependencies": [
     "BepInEx-BepInExPack_IL2CPP-6.0.667"
   ]
