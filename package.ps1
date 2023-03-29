@@ -26,7 +26,7 @@ Get-Content "./manifest.json" `
   } `
   | Set-Content "$packageRoot/manifest.json"
 
-Copy-Item "$pluginName/bin/Debug/net47/$pluginName.dll" $packageRoot
+Copy-Item "$pluginName/bin/Debug/net6.0/$pluginName.dll" $packageRoot
 
 $zipName = "$pluginName.zip"
 Remove-Item -Path $zipName -Recurse -Force -ErrorAction SilentlyContinue
