@@ -5,26 +5,24 @@ namespace FriendlyFireControls;
 
 public class FriendlyFireControls : MonoBehaviour
 {
-    public ManualLogSource Log { get; set; }
-
     private int seconds { get; set; }
     private double logHeartbeatCounter { get; set; }
 
-    public void Start()
+    void Start()
     {
-        Log.LogInfo($"Plugin {MyPluginInfoString.Value()} has started!");
+        Plugin.Log.LogInfo($"Plugin {MyPluginInfoString.Value()} has started!");
     }
 
-    public void Update()
+    void Update()
     {
         logHeartbeatCounter += Time.deltaTime;
 
-        if (logHeartbeatCounter > 1.0f)
+        if (logHeartbeatCounter > 10.0f)
         {
-            seconds += 1;
-            logHeartbeatCounter -= 1.0f;
+            seconds += 10;
+            logHeartbeatCounter -= 10.0f;
 
-            Log.LogInfo($"Plugin {MyPluginInfoString.Value()} has been running for {seconds} seconds!");
+            Plugin.Log.LogInfo($"Plugin {MyPluginInfoString.Value()} has been running for {seconds} seconds!");
         }
     }
 }

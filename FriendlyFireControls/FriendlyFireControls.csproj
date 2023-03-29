@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>FriendlyFireControls</AssemblyName>
-    <Description>My first plugin</Description>
+    <Description>Don't bash your friends anymore!</Description>
     <Version>0.1.2</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
@@ -18,7 +18,255 @@
   <ItemGroup>
     <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.*" IncludeAssets="compile" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
-    <PackageReference Include="Unity3D.UnityEngine" Version="2018.3.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.GIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsNativeModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UIElementsNativeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.CoreModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.DeviceSimulatorModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.DeviceSimulatorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.DiagnosticsModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.DiagnosticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.GraphViewModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.GraphViewModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.PackageManagerUIModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.PackageManagerUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.QuickSearchModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.QuickSearchModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SceneTemplateModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.SceneTemplateModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreFontEngineModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreTextEngineModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.TextCoreTextEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIBuilderModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.UIBuilderModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsSamplesModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.UIElementsSamplesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIServiceModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.UIServiceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UnityConnectModule">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\BepInEx\unity-libs\UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
 ﻿using BepInEx;
+using BepInEx.Logging;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
 using Il2CppInterop.Runtime.Injection;
@@ -11,8 +12,12 @@ namespace FriendlyFireControls;
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 public class Plugin : BasePlugin
 {
+    internal static new ManualLogSource Log;
+
     public override void Load()
     {
+        Plugin.Log = base.Log;
+
         TryLoad();
     }
 
@@ -20,14 +25,13 @@ public class Plugin : BasePlugin
     {
         try
         {
-            Log.LogInfo($"Trying to load plugin...: {MyPluginInfoString.Value()}");
+            Log.LogInfo($"Trying to load plugin: {MyPluginInfoString.Value()}");
 
             ClassInjector.RegisterTypeInIl2Cpp<FriendlyFireControls>();
             var plugin = new GameObject(typeof(FriendlyFireControls).FullName);
             UnityEngine.Object.DontDestroyOnLoad(plugin);
             plugin.AddComponent<FriendlyFireControls>();
-            var friendlyFireControls = plugin.GetComponent<FriendlyFireControls>();
-            friendlyFireControls.Log = Log;
+            plugin.hideFlags = HideFlags.HideAndDontSave;
 
             Log.LogInfo("Plugin has been loaded!");
 
